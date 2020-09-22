@@ -1,9 +1,35 @@
-#Commit test
-#test2
-
 import ast
 import datetime
 
+#Hur ska jag koppla textfilen med programmet?
+
+class account:
+    def __init__(self, accountNumber, balance):
+        self._accountNumber = accountNumber
+        self._balance = balance
+    
+    def createAccount():
+        accountNumber = int(input('Enter your 6-digit account number> '))
+        balance = 0
+        newAccount = account(accountNumber,balance)
+        with open('accounts.txt','w') as f:
+        f.write(f'{newAccount.accountNumber} {balance}')
+        return newAccount
+
+        self._balance = 0
+
+    def deposit(self, depositValue):
+        self._balance = self._balance + depositValue
+
+    def withdraw(self, withdrawValue):
+        self._balance = self._balance - withdrawValue
+
+entry1 = int(input('****MAIN MENU****\n1. Create account\n2. Login\n3. End session\n> '))
+    if entry1 == 1:
+        createaccount()
+
+
+"""
 with open('accounts.txt','r') as f:
     contents = f.read()
     accountInfo = ast.literal_eval(contents)
@@ -61,5 +87,5 @@ while avsluta == False:
 
 with open('accounts.txt','w') as f:
     f.write(str(accountInfo))
-
+"""
 

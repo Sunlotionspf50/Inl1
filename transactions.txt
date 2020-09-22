@@ -1,3 +1,7 @@
 Sun Sep 20 21:00:37 2020 > account = 111111 > withdrawal > 200 kr
 Sun Sep 20 21:01:56 2020 > account = 111111 > deposit > 300 kr
 Sun Sep 20 21:02:00 2020 > account = 111111 > withdrawal > 150 kr
+Mon Sep 21 21:36:55 2020 > account = 123456 > deposit > 50 kr
+Mon Sep 21 21:37:01 2020 > account = 123456 > withdrawal > 20 kr
+Tue Sep 22 11:45:58 2020 > account = 123457 > deposit > 1000 kr
+Tue Sep 22 11:46:05 2020 > account = 123457 > withdrawal > 100 kr
