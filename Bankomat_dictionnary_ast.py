@@ -1,6 +1,3 @@
-#Commit test
-#test2
-
 import ast
 import datetime
 

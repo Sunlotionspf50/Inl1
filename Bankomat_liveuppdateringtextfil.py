@@ -1,29 +1,27 @@
 import datetime
 
 
-    
 def accountAvailability(newAccount):
     with open('accounts.txt','r') as f:
-        if newAccount in f.read():
+        if str(newAccount) in f.read():
             return False
 
 def createAccount():
     accountAvailable = False
     while accountAvailable == False:
-        try:
-            newAccount = int(input('Enter your 6-digit account number> '))
-            break
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
-        else:
-            accountAvailable = accountAvailability(newAccount)
-            if accountAvailable == False:
-                print('Account already in use. Try again.')
+        while True:
+            try:
+                newAccount = int(input('Enter your 6-digit account number> '))
+                break
+            except ValueError:
+                print("Oops!  That was no valid number.  Try again...")
+        accountAvailable = accountAvailability(newAccount)
+        if accountAvailable == False:
+            print('Account number already in use.')
     with open('accounts.txt','a') as f:
         f.write(f'{newAccount} 0\n')
         print(f'Account {newAccount} created successfully.')
-    
-          
+              
 def gotoMainmenu():
     while True:
         while True:
@@ -33,7 +31,6 @@ def gotoMainmenu():
             except ValueError:
                 print("Oops!  That was no valid number.  Try again...")
         if entry == 1:
-            print('gotocreateaccount')
             createAccount()
         if entry == 2:
             while True:
@@ -91,7 +88,7 @@ def gotoAccountmenu(login):
                     withdrawal = int(input('Amount to withdraw> '))
                     break
                 except ValueError:
-                    print("Oops!  That was no valid number.  Try again...")   
+                    print("Oops!  That was no valid number.  Try again...")
             currentBalance = getbalancefromfile(login)
             if currentBalance < withdrawal:
                 print('Your balance is too low.')
