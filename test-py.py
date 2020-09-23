@@ -11,6 +11,7 @@ class account:
     def saveAccountTofile():
         with open('accounts.txt','a') as f:
             f.write(f'{newAccount._accountNumber} {newAccount._balance}')
+                
 
     def createAccount():
         accountAvailable = False
@@ -57,14 +58,20 @@ class account:
         if entry == 3:
             print('Session ended. Please come again.')
             break
-    
+
     def getbalancefromfile(accountNumber):
         with open('accounts.txt','r') as f:
             data = f.readlines()
             for line in data:
-                if line.__contains__('accountNumber'):
-                    accountInfo = []
-                    accountInfo.append(line)
+                if line.__contains__('123456'):
+                    accountInfo=line
+                    balance=int(accountInfo.split(" ")[1])
+                    return balance
+                    
+    def updateBalanceinFile(accountNumber, newBalance):
+        with open ('accounts.txt','w')
+
+
                 
 
     def gotoAccountmenu(login):
@@ -82,12 +89,14 @@ class account:
                 except ValueError:
                     print("Oops!  That was no valid number.  Try again...")
                 else:
-                    getbalancefromfile(login)
+                    currentBalance = getbalancefromfile(login)
 
                     if currentBalance < withdrawal:
                         print('Your balance is too low.')
                     else:
                         newbalance = currentBalance - withdrawal
                         login._balance = newbalance
+                        updateBalanceinFile(login._balance)
+
      
 
