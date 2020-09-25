@@ -1,6 +1,2 @@
-Thu Sep 24 17:40:41 2020 > account = 222222 > deposit > 100 kr
-Thu Sep 24 17:40:48 2020 > account = 222222 > withdrawal > 50 kr
-Thu Sep 24 18:58:10 2020 > account = 123456 > deposit > 500 kr
-Thu Sep 24 18:58:26 2020 > account = 123456 > withdrawal > 300 kr
-Thu Sep 24 18:58:52 2020 > account = 123456 > deposit > 400000 kr
-Thu Sep 24 18:59:31 2020 > account = 123456 > withdrawal > 135673 kr
+Fri Sep 25 20:33:28 2020 > account = 555555 > deposit > 500 kr
+Fri Sep 25 20:33:32 2020 > account = 555555 > withdrawal > 50 kr

@@ -1,4 +1,6 @@
-#Jonathans OOP Bankomat!
+#Jonathans OOP Bankomat! 
+
+#Här är min slutgiltiga version för inlämningsuppgift 1. 
 
 import datetime
 
@@ -212,3 +214,4 @@ def gotoAccountmenu(Account):
 #Run program:
 
 Mainmenu()
+
